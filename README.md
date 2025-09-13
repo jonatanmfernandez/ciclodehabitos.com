@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Astro Starter Kit: Blog
 
 ```sh
@@ -60,3 +61,7 @@ Check out [our documentation](https://docs.astro.build) or jump into our [Discor
 ## Credit
 
 This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+=======
+# ciclodehabitos.com
+Blog de gestión de hábitos y productividad 
+>>>>>>> 5aaeae51309ac80201fb48e806a862366366a516

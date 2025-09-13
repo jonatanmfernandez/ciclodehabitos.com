@@ -6,44 +6,305 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			.hero-section {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				padding: 4rem 2rem;
+				text-align: center;
+				margin: -1rem -1rem 3rem -1rem;
+			}
+			.hero-title {
+				font-size: 3rem;
+				font-weight: bold;
+				margin-bottom: 1rem;
+				line-height: 1.2;
+			}
+			.hero-subtitle {
+				font-size: 1.25rem;
+				margin-bottom: 2rem;
+				opacity: 0.9;
+			}
+			.cta-buttons {
+				display: flex;
+				gap: 1rem;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin-top: 2rem;
+			}
+			.btn {
+				padding: 0.75rem 1.5rem;
+				border-radius: 0.5rem;
+				text-decoration: none;
+				font-weight: 600;
+				transition: all 0.3s ease;
+			}
+			.btn-primary {
+				background: white;
+				color: #667eea;
+			}
+			.btn-primary:hover {
+				background: #f8f9fa;
+				transform: translateY(-2px);
+			}
+			.btn-secondary {
+				background: transparent;
+				color: white;
+				border: 2px solid white;
+			}
+			.btn-secondary:hover {
+				background: white;
+				color: #667eea;
+			}
+			.section {
+				margin: 3rem 0;
+				padding: 2rem 0;
+			}
+			.section-title {
+				font-size: 2.5rem;
+				text-align: center;
+				margin-bottom: 2rem;
+				color: #333;
+			}
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+				margin: 2rem 0;
+			}
+			.feature-card {
+				background: #f8f9fa;
+				padding: 2rem;
+				border-radius: 1rem;
+				text-align: center;
+			}
+			.feature-icon {
+				font-size: 3rem;
+				margin-bottom: 1rem;
+			}
+			.quote-section {
+				background: #f8f9fa;
+				padding: 3rem 2rem;
+				text-align: center;
+				margin: 3rem 0;
+				border-radius: 1rem;
+			}
+			.quote {
+				font-size: 1.5rem;
+				font-style: italic;
+				margin-bottom: 1rem;
+				color: #555;
+			}
+			.quote-author {
+				font-weight: 600;
+				color: #667eea;
+			}
+			.blog-preview {
+				background: white;
+				border: 1px solid #e9ecef;
+				border-radius: 1rem;
+				padding: 2rem;
+				margin: 2rem 0;
+			}
+			.blog-post {
+				border-bottom: 1px solid #e9ecef;
+				padding: 1.5rem 0;
+			}
+			.blog-post:last-child {
+				border-bottom: none;
+			}
+			.blog-title {
+				font-size: 1.25rem;
+				font-weight: 600;
+				margin-bottom: 0.5rem;
+				color: #333;
+			}
+			.blog-meta {
+				color: #666;
+				font-size: 0.9rem;
+				margin-bottom: 0.5rem;
+			}
+			.blog-excerpt {
+				color: #555;
+				line-height: 1.6;
+			}
+			.newsletter {
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
+				padding: 3rem 2rem;
+				text-align: center;
+				border-radius: 1rem;
+				margin: 3rem 0;
+			}
+			.newsletter-title {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+			}
+			.newsletter-form {
+				display: flex;
+				gap: 1rem;
+				justify-content: center;
+				margin-top: 2rem;
+				flex-wrap: wrap;
+			}
+			.newsletter-input {
+				padding: 0.75rem 1rem;
+				border: none;
+				border-radius: 0.5rem;
+				flex: 1;
+				min-width: 250px;
+			}
+			@media (max-width: 768px) {
+				.hero-title {
+					font-size: 2rem;
+				}
+				.cta-buttons {
+					flex-direction: column;
+					align-items: center;
+				}
+				.newsletter-form {
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
+		
+		<!-- Hero Section -->
+		<section class="hero-section">
+			<h1 class="hero-title">Transforma tu rutina,<br>transforma tus resultados.</h1>
+			<p class="hero-subtitle">
+				Bienvenido a Ciclo de Hábitos, el espacio donde el desarrollo personal se convierte en un viaje tangible y transformador.
+			</p>
+			<p>
+				Aprende a dominar tu tiempo y a maximizar tu productividad con nuestros consejos prácticos y estrategias efectivas.<br>
+				Descubre el poder de la organización y alcanza tus metas más rápido.
+			</p>
+			<div class="cta-buttons">
+				<a href="/blog" class="btn btn-primary">Descargar Tracker</a>
+				<a href="/blog" class="btn btn-secondary">Descubre nuestro blog</a>
+			</div>
+		</section>
+
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<!-- El momento es ahora -->
+			<section class="section">
+				<h2 class="section-title">El momento es ahora</h2>
+				<div style="text-align: center; margin: 2rem 0;">
+					<p style="font-size: 1.25rem; color: #555; max-width: 800px; margin: 0 auto;">
+						No puedes cambiar tu destino de la noche a la mañana, pero puedes cambiar tus hábitos, y tus hábitos cambiarán tu destino.
+					</p>
+				</div>
+			</section>
+
+			<!-- Descubre el contenido -->
+			<section class="section">
+				<h2 class="section-title">Descubre el contenido que te ayudará a construir tu futuro:</h2>
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon">📚</div>
+						<h3>Artículos motivacionales</h3>
+						<p>Que te impulsarán a pasar de la intención a la acción</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">📖</div>
+						<h3>Sabiduría destilada</h3>
+						<p>De los mejores libros de crecimiento personal</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">🎯</div>
+						<h3>Estrategias prácticas</h3>
+						<p>Para cultivar hábitos que perduran</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">💪</div>
+						<h3>Guías especializadas</h3>
+						<p>Para optimizar tu bienestar físico y mental</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">🌟</div>
+						<h3>Testimonios inspiradores</h3>
+						<p>De personas que rompieron sus ciclos limitantes</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Construye la vida que deseas -->
+			<section class="section">
+				<h2 class="section-title">Construye la vida que deseas, un hábito a la vez</h2>
+				<div style="text-align: center; margin: 2rem 0;">
+					<p style="font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto 2rem;">
+						En Ciclo de Hábitos creemos que la verdadera transformación nace de las pequeñas decisiones diarias. 
+						Aquí encontrarás las herramientas, la inspiración y el conocimiento necesarios para diseñar una vida plena, consciente y llena de propósito.
+					</p>
+				</div>
+				<div class="quote-section">
+					<div class="quote">
+						"Pequeños cambios diarios conducen a resultados extraordinarios."
+					</div>
+					<div class="quote-author">— James Clear</div>
+				</div>
+			</section>
+
+			<!-- Combate la procrastinación -->
+			<section class="section">
+				<h2 class="section-title">Combate la procrastinación</h2>
+				<div style="text-align: center; margin: 2rem 0;">
+					<p style="font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto 2rem;">
+						Cada nuevo hábito positivo tiene el poder de desencadenar un ciclo virtuoso en tu vida. 
+						En Ciclo de Hábitos te acompañamos a identificar aquellos pequeños cambios que generarán el mayor impacto en tu bienestar.
+					</p>
+				</div>
+				<div class="quote-section">
+					<div class="quote">
+						"La forma de empezar es dejar de hablar y comenzar a hacer."
+					</div>
+					<div class="quote-author">— Walt Disney</div>
+				</div>
+			</section>
+
+			<!-- Blog Preview -->
+			<section class="section">
+				<h2 class="section-title">Conoce nuestro blog:</h2>
+				<div class="blog-preview">
+					<div class="blog-post">
+						<div class="blog-meta">Sin categoría • 31 marzo, 2025</div>
+						<h3 class="blog-title">Mente positiva: Cómo cultivar una actitud optimista y resiliente</h3>
+						<p class="blog-excerpt">
+							¿Alguna vez te has preguntado por qué algunas personas parecen mantenerse optimistas incluso en las situaciones más difíciles? 
+							La respuesta está en sus hábitos mentales...
+						</p>
+						<a href="/blog" style="color: #667eea; font-weight: 600;">Leer más →</a>
+					</div>
+					<div class="blog-post">
+						<div class="blog-meta">Sin categoría • 1 marzo, 2025</div>
+						<h3 class="blog-title">9 Hábitos Secretos para una Fortaleza Emocional Inquebrantable</h3>
+						<p class="blog-excerpt">
+							¿Has experimentado momentos en los que las emociones te han paralizado o te han impedido tomar decisiones importantes? 
+							La fortaleza emocional no es algo con lo que naces...
+						</p>
+						<a href="/blog" style="color: #667eea; font-weight: 600;">Leer más →</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Newsletter -->
+			<section class="newsletter">
+				<h2 class="newsletter-title">Suscríbete Ahora</h2>
+				<p>Comienza hoy a construir los ciclos que definirán tu mañana.</p>
+				<p>Recibe contenido exclusivo sobre desarrollo personal, técnicas de mindfulness, estrategias de productividad y mucho más.</p>
+				<div class="newsletter-form">
+					<input type="email" placeholder="Tu email" class="newsletter-input">
+					<button class="btn btn-primary">Suscribirse</button>
+				</div>
+			</section>
 		</main>
+		
 		<Footer />
 	</body>
 </html>

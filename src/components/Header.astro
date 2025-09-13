@@ -7,9 +7,10 @@ import HeaderLink from './HeaderLink.astro';
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/">Inicio</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/contact">Contact</HeaderLink>
 		</div>
 		<div class="social-links">
 		</div>
@@ -21,30 +22,46 @@ import HeaderLink from './HeaderLink.astro';
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		position: sticky;
+		top: 0;
+		z-index: 100;
 	}
 	h2 {
 		margin: 0;
-		font-size: 1em;
+		font-size: 1.2em;
+		font-weight: 700;
 	}
 
 	h2 a,
 	h2 a.active {
 		text-decoration: none;
+		color: #667eea;
 	}
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 	nav a {
 		padding: 1em 0.5em;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+	nav a:hover {
+		color: #667eea;
+		border-bottom-color: #667eea;
 	}
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
+	}
+	.internal-links {
+		display: flex;
+		gap: 1rem;
 	}
 	.social-links,
 	.social-links a {
@@ -53,6 +70,13 @@ import HeaderLink from './HeaderLink.astro';
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		.internal-links {
+			gap: 0.5rem;
+		}
+		nav a {
+			padding: 0.5em 0.25em;
+			font-size: 0.9em;
 		}
 	}
 </style>

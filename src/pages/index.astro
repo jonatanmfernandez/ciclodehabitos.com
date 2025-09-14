@@ -11,14 +11,17 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
 			.hero-section {
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				color: white;
+				background: white;
 				padding: 4rem 2rem;
 				text-align: center;
 				margin: -1rem -1rem 3rem -1rem;
 			}
 			.hero-title {
 				font-size: 3rem;
+				background: linear-gradient(135deg, #000000 0%, #000000 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
 				font-weight: bold;
 				margin-bottom: 1rem;
 				line-height: 1.2;
@@ -26,7 +29,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			.hero-subtitle {
 				font-size: 1.25rem;
 				margin-bottom: 2rem;
-				opacity: 0.9;
+				color: #555;
 			}
 			.cta-buttons {
 				display: flex;
@@ -52,12 +55,12 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			}
 			.btn-secondary {
 				background: transparent;
-				color: white;
-				border: 2px solid white;
+				color: #667eea;
+				border: 2px solid #667eea;
 			}
 			.btn-secondary:hover {
-				background: white;
-				color: #667eea;
+				background: #667eea;
+				color: white;
 			}
 			.section {
 				margin: 3rem 0;
@@ -70,11 +73,14 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				color: #333;
 			}
 			.features-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-				gap: 2rem;
-				margin: 2rem 0;
-			}
+ 				display: grid;
+			    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  				gap: 2rem;
+ 				margin: 2rem 0;
+ 				max-width: 1000px; 
+ 				margin: 0 auto;     
+		}
+
 			.feature-card {
 				background: #f8f9fa;
 				padding: 2rem;
@@ -142,6 +148,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			.newsletter-title {
 				font-size: 2rem;
 				margin-bottom: 1rem;
+				color: white;
 			}
 			.newsletter-form {
 				display: flex;
@@ -177,7 +184,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		
 		<!-- Hero Section -->
 		<section class="hero-section">
-			<h1 class="hero-title">Transforma tu rutina,<br>transforma tus resultados.</h1>
+			<h1 class="hero-title">Transforma tu rutina</h1>
 			<p class="hero-subtitle">
 				Bienvenido a Ciclo de Hábitos, el espacio donde el desarrollo personal se convierte en un viaje tangible y transformador.
 			</p>
@@ -186,7 +193,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				Descubre el poder de la organización y alcanza tus metas más rápido.
 			</p>
 			<div class="cta-buttons">
-				<a href="/blog" class="btn btn-primary">Descargar Tracker</a>
 				<a href="/blog" class="btn btn-secondary">Descubre nuestro blog</a>
 			</div>
 		</section>

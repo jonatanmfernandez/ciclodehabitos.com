@@ -12,7 +12,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		<style>
 			.hero-section {
 				background: white;
-				padding: 4rem 2rem;
+				padding: 6rem 2rem 4rem 2rem;
 				text-align: center;
 				margin: -1rem -1rem 3rem -1rem;
 			}
@@ -46,11 +46,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				transition: all 0.3s ease;
 			}
 			.btn-primary {
-				background: white;
-				color: #667eea;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				color: white;
 			}
 			.btn-primary:hover {
-				background: #f8f9fa;
+				background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
 				transform: translateY(-2px);
 			}
 			.btn-secondary {
@@ -65,6 +65,14 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			.section {
 				margin: 3rem 0;
 				padding: 2rem 0;
+			}
+			.section-highlight {
+				background: #f8f9fa;
+				border-radius: 0;
+				padding: 3rem 0;
+				margin: 2rem 0;
+				width: 100vw;
+				margin-left: calc(-50vw + 50%);
 			}
 			.section-title {
 				font-size: 2.5rem;
@@ -91,12 +99,20 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				font-size: 3rem;
 				margin-bottom: 1rem;
 			}
-			.quote-section {
-				background: #f8f9fa;
-				padding: 3rem 2rem;
-				text-align: center;
-				margin: 3rem 0;
-				border-radius: 1rem;
+			.content-quote-container {
+				display: flex;
+				gap: 2rem;
+				align-items: center;
+				margin: 2rem 0;
+			}
+			.content-text {
+				flex: 1;
+				text-align: left;
+			}
+			.content-quote-container .quote-section {
+				flex: 1;
+				margin: 0;
+				padding: 2rem;
 			}
 			.quote {
 				font-size: 1.5rem;
@@ -176,6 +192,13 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 					flex-direction: column;
 					align-items: center;
 				}
+				.content-quote-container {
+					flex-direction: column;
+					gap: 1rem;
+				}
+				.content-text {
+					text-align: center;
+				}
 			}
 		</style>
 	</head>
@@ -193,13 +216,13 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				Descubre el poder de la organización y alcanza tus metas más rápido.
 			</p>
 			<div class="cta-buttons">
-				<a href="/blog" class="btn btn-secondary">Descubre nuestro blog</a>
+				<a href="/blog" class="btn btn-primary">Descubre nuestro blog</a>
 			</div>
 		</section>
 
 		<main>
 			<!-- El momento es ahora -->
-			<section class="section">
+			<section class="section-highlight">
 				<h2 class="section-title">El momento es ahora</h2>
 				<div style="text-align: center; margin: 2rem 0;">
 					<p style="font-size: 1.25rem; color: #555; max-width: 800px; margin: 0 auto;">
@@ -243,34 +266,38 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			<!-- Construye la vida que deseas -->
 			<section class="section">
 				<h2 class="section-title">Construye la vida que deseas, un hábito a la vez</h2>
-				<div style="text-align: center; margin: 2rem 0;">
-					<p style="font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto 2rem;">
-						En Ciclo de Hábitos creemos que la verdadera transformación nace de las pequeñas decisiones diarias. 
-						Aquí encontrarás las herramientas, la inspiración y el conocimiento necesarios para diseñar una vida plena, consciente y llena de propósito.
-					</p>
-				</div>
-				<div class="quote-section">
-					<div class="quote">
-						"Pequeños cambios diarios conducen a resultados extraordinarios."
+				<div class="content-quote-container">
+					<div class="content-text">
+						<p style="font-size: 1.1rem; color: #555; margin: 0;">
+							En Ciclo de Hábitos creemos que la verdadera transformación nace de las pequeñas decisiones diarias. 
+							Aquí encontrarás las herramientas, la inspiración y el conocimiento necesarios para diseñar una vida plena, consciente y llena de propósito.
+						</p>
 					</div>
-					<div class="quote-author">— James Clear</div>
+					<div class="quote-section">
+						<div class="quote">
+							"Pequeños cambios diarios conducen a resultados extraordinarios."
+						</div>
+						<div class="quote-author">— James Clear</div>
+					</div>
 				</div>
 			</section>
 
 			<!-- Combate la procrastinación -->
 			<section class="section">
 				<h2 class="section-title">Combate la procrastinación</h2>
-				<div style="text-align: center; margin: 2rem 0;">
-					<p style="font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto 2rem;">
-						Cada nuevo hábito positivo tiene el poder de desencadenar un ciclo virtuoso en tu vida. 
-						En Ciclo de Hábitos te acompañamos a identificar aquellos pequeños cambios que generarán el mayor impacto en tu bienestar.
-					</p>
-				</div>
-				<div class="quote-section">
-					<div class="quote">
-						"La forma de empezar es dejar de hablar y comenzar a hacer."
+				<div class="content-quote-container">
+					<div class="content-text">
+						<p style="font-size: 1.1rem; color: #555; margin: 0;">
+							Cada nuevo hábito positivo tiene el poder de desencadenar un ciclo virtuoso en tu vida. 
+							En Ciclo de Hábitos te acompañamos a identificar aquellos pequeños cambios que generarán el mayor impacto en tu bienestar.
+						</p>
 					</div>
-					<div class="quote-author">— Walt Disney</div>
+					<div class="quote-section">
+						<div class="quote">
+							"La forma de empezar es dejar de hablar y comenzar a hacer."
+						</div>
+						<div class="quote-author">— Walt Disney</div>
+					</div>
 				</div>
 			</section>
 

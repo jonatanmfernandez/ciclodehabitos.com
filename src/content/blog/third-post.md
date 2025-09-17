@@ -2,7 +2,7 @@
 title: 'Cómo Crear Hábitos Duraderos: La Guía Definitiva'
 description: 'Descubre los secretos para desarrollar hábitos que realmente perduren y transformen tu vida'
 pubDate: 'Jan 15 2025'
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/blog-placeholder-2.jpg'
 ---
 
 # La Ciencia Detrás de los Hábitos Duraderos

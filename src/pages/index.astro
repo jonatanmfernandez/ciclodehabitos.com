@@ -9,198 +9,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <html lang="es">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			.hero-section {
-				background: white;
-				padding: 6rem 2rem 4rem 2rem;
-				text-align: center;
-				margin: -1rem -1rem 3rem -1rem;
-			}
-			.hero-title {
-				font-size: 3rem;
-				background: linear-gradient(135deg, #000000 0%, #000000 100%);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
-				font-weight: bold;
-				margin-bottom: 1rem;
-				line-height: 1.2;
-			}
-			.hero-subtitle {
-				font-size: 1.25rem;
-				margin-bottom: 2rem;
-				color: #555;
-			}
-			.cta-buttons {
-				display: flex;
-				gap: 1rem;
-				justify-content: center;
-				flex-wrap: wrap;
-				margin-top: 2rem;
-			}
-			.btn {
-				padding: 0.75rem 1.5rem;
-				border-radius: 0.5rem;
-				text-decoration: none;
-				font-weight: 600;
-				transition: all 0.3s ease;
-			}
-			.btn-primary {
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				color: white;
-			}
-			.btn-primary:hover {
-				background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
-				transform: translateY(-2px);
-			}
-			.btn-secondary {
-				background: transparent;
-				color: #667eea;
-				border: 2px solid #667eea;
-			}
-			.btn-secondary:hover {
-				background: #667eea;
-				color: white;
-			}
-			.section {
-				margin: 3rem 0;
-				padding: 2rem 0;
-			}
-			.section-highlight {
-				background: #f8f9fa;
-				border-radius: 0;
-				padding: 3rem 0;
-				margin: 2rem 0;
-				width: 100vw;
-				margin-left: calc(-50vw + 50%);
-			}
-			.section-title {
-				font-size: 2.5rem;
-				text-align: center;
-				margin-bottom: 2rem;
-				color: #333;
-			}
-			.features-grid {
- 				display: grid;
-			    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  				gap: 2rem;
- 				margin: 2rem 0;
- 				max-width: 1000px; 
- 				margin: 0 auto;     
-		}
-
-			.feature-card {
-				background: #f8f9fa;
-				padding: 2rem;
-				border-radius: 1rem;
-				text-align: center;
-			}
-			.feature-icon {
-				font-size: 3rem;
-				margin-bottom: 1rem;
-			}
-			.content-quote-container {
-				display: flex;
-				gap: 2rem;
-				align-items: center;
-				margin: 2rem 0;
-			}
-			.content-text {
-				flex: 1;
-				text-align: left;
-			}
-			.content-quote-container .quote-section {
-				flex: 1;
-				margin: 0;
-				padding: 2rem;
-			}
-			.quote {
-				font-size: 1.5rem;
-				font-style: italic;
-				margin-bottom: 1rem;
-				color: #555;
-			}
-			.quote-author {
-				font-weight: 600;
-				color: #667eea;
-			}
-			.blog-preview {
-				background: white;
-				border: 1px solid #e9ecef;
-				border-radius: 1rem;
-				padding: 2rem;
-				margin: 2rem 0;
-			}
-			.blog-post {
-				border-bottom: 1px solid #e9ecef;
-				padding: 1.5rem 0;
-			}
-			.blog-post:last-child {
-				border-bottom: none;
-			}
-			.blog-title {
-				font-size: 1.25rem;
-				font-weight: 600;
-				margin-bottom: 0.5rem;
-				color: #333;
-			}
-			.blog-meta {
-				color: #666;
-				font-size: 0.9rem;
-				margin-bottom: 0.5rem;
-			}
-			.blog-excerpt {
-				color: #555;
-				line-height: 1.6;
-			}
-			.newsletter {
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				color: white;
-				padding: 3rem 2rem;
-				text-align: center;
-				border-radius: 1rem;
-				margin: 3rem 0;
-			}
-			.newsletter-title {
-				font-size: 2rem;
-				margin-bottom: 1rem;
-				color: white;
-			}
-			.newsletter-form {
-				display: flex;
-				gap: 1rem;
-				justify-content: center;
-				margin-top: 2rem;
-				flex-wrap: wrap;
-			}
-			.newsletter-input {
-				padding: 0.75rem 1rem;
-				border: none;
-				border-radius: 0.5rem;
-				flex: 1;
-				min-width: 250px;
-			}
-			@media (max-width: 768px) {
-				.hero-title {
-					font-size: 2rem;
-				}
-				.cta-buttons {
-					flex-direction: column;
-					align-items: center;
-				}
-				.newsletter-form {
-					flex-direction: column;
-					align-items: center;
-				}
-				.content-quote-container {
-					flex-direction: column;
-					gap: 1rem;
-				}
-				.content-text {
-					text-align: center;
-				}
-			}
-		</style>
 	</head>
 	<body>
 		<Header />
@@ -224,8 +32,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 			<!-- El momento es ahora -->
 			<section class="section-highlight">
 				<h2 class="section-title">El momento es ahora</h2>
-				<div style="text-align: center; margin: 2rem 0;">
-					<p style="font-size: 1.25rem; color: #555; max-width: 800px; margin: 0 auto;">
+				<div class="text-center mb-2">
+					<p class="font-size-lg color-gray max-width-800 mb-0">
 						No puedes cambiar tu destino de la noche a la mañana, pero puedes cambiar tus hábitos, y tus hábitos cambiarán tu destino.
 					</p>
 				</div>
@@ -268,7 +76,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				<h2 class="section-title">Construye la vida que deseas, un hábito a la vez</h2>
 				<div class="content-quote-container">
 					<div class="content-text">
-						<p style="font-size: 1.1rem; color: #555; margin: 0;">
+						<p class="font-size-xl color-gray mb-0">
 							En Ciclo de Hábitos creemos que la verdadera transformación nace de las pequeñas decisiones diarias. 
 							Aquí encontrarás las herramientas, la inspiración y el conocimiento necesarios para diseñar una vida plena, consciente y llena de propósito.
 						</p>
@@ -287,7 +95,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 				<h2 class="section-title">Combate la procrastinación</h2>
 				<div class="content-quote-container">
 					<div class="content-text">
-						<p style="font-size: 1.1rem; color: #555; margin: 0;">
+						<p class="font-size-xl color-gray mb-0">
 							Cada nuevo hábito positivo tiene el poder de desencadenar un ciclo virtuoso en tu vida. 
 							En Ciclo de Hábitos te acompañamos a identificar aquellos pequeños cambios que generarán el mayor impacto en tu bienestar.
 						</p>
@@ -312,7 +120,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 							¿Alguna vez te has preguntado por qué algunas personas parecen mantenerse optimistas incluso en las situaciones más difíciles? 
 							La respuesta está en sus hábitos mentales...
 						</p>
-						<a href="/blog" style="color: #667eea; font-weight: 600;">Leer más →</a>
+						<a href="/blog" class="color-primary font-weight-bold">Leer más →</a>
 					</div>
 					<div class="blog-post">
 						<div class="blog-meta">Sin categoría • 1 marzo, 2025</div>
@@ -321,7 +129,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 							¿Has experimentado momentos en los que las emociones te han paralizado o te han impedido tomar decisiones importantes? 
 							La fortaleza emocional no es algo con lo que naces...
 						</p>
-						<a href="/blog" style="color: #667eea; font-weight: 600;">Leer más →</a>
+						<a href="/blog" class="color-primary font-weight-bold">Leer más →</a>
 					</div>
 				</div>
 			</section>
